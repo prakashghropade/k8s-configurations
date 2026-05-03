@@ -6,7 +6,7 @@ metadata:
 spec:
   completions: 1
   parallelism: 1
-  teplate:
+  template:
     metadata:
       name: demo-job-pod
       labels:
