@@ -11,7 +11,7 @@ spec:
       app: nginx-pod
   template:
     metadata:
-      name: nginx-deamon-pod
+      name: nginx-dep-pod
       labels:
         app: nginx-pod
     spec:
