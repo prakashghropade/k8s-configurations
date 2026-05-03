@@ -1,0 +1,22 @@
+kind: CronJob
+apiVersion: batch/v1
+metadata:
+  name: nginx-cronjob
+  namespace: nginx 
+spec:
+  schedule: "*/5 * * * *" # Run every 5 minutes
+  jobTemplate:
+    spec:
+      completions: 1
+      parallelism: 1
+      template:
+        metadata:
+          name: demo-cronjob-pod
+          labels:
+            app: batch-cronjob
+        spec:
+          containers:
+          - name: batch-container
+            image: busybox
+            command: ["sh", "-c", "echo", "Hello, World! && sleep"]
+          restartPolicy: OnFailure  
