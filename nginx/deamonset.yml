@@ -1,4 +1,4 @@
-kind: DeamonSet
+kind: DaemonSet
 apiVersion: apps/v1
 metadata:
   name: nginx-deamonset
