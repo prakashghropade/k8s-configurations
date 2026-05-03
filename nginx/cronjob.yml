@@ -4,7 +4,7 @@ metadata:
   name: nginx-cronjob
   namespace: nginx 
 spec:
-  schedule: "*/5 * * * *" # Run every 5 minutes
+  schedule: "* * * * *" # Run every 5 minutes
   jobTemplate:
     spec:
       completions: 1
