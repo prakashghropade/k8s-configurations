@@ -4,7 +4,7 @@ metadata:
   name: local-pvc
 spec:
   accessModes:
-    - ReadWriteOnece
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
