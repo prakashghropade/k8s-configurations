@@ -10,6 +10,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   presistentVolumeReclaimPolicy: Retain
-  storageClass: local-storage
+  storageClassName: local-storage
   hostPath:
     path: /mnt/data
