@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: nginx-deployment
-  port:
+  ports:
     - protocol: TCP
       port: 80
       targetPort: 80
