@@ -8,7 +8,7 @@ spec:
   capacity:
     storage: 1Gi
   accessModes:
-    - ReadWriteOnec:
+    - ReadWriteOnce:
   presistentVolumeReclaimPolicy: Retain
   storageClass: local-storage
   hostPath:
