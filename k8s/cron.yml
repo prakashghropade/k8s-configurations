@@ -14,7 +14,7 @@ spec:
           labels:
             app: minute-backup
         spec:
-          containers:
+        containers:
           - name: backup-container
             image: busybox
             command:
@@ -32,12 +32,12 @@ spec:
               - name: backup-volume
                 mountPath: /backup
             restartPolicy: OnFailure
-            volumes:
-              - name: data-volume
-                hostPath:
-                  path: /demo-data
-                  type: DirectoryOrCreate
-              - name: data-volume
-                hostpath:
-                  path: /demo-data
-                  type: DirectoryOrCreate
+        volumes:
+          - name: data-volume
+            hostPath:
+            path: /demo-data
+            type: DirectoryOrCreate
+          - name: data-volume
+            hostpath:
+            path: /demo-data
+            type: DirectoryOrCreate
