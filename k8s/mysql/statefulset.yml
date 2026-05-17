@@ -11,7 +11,7 @@ spec:
   selectors:
     matchLabels:
       app: mysql
-  templates:
+  template:
     metadata:
       labels:
         app: mysql
