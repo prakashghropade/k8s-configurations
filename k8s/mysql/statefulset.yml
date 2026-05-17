@@ -8,7 +8,7 @@ metadata:
 spec:
   serviceName: mysql-service
   replicas: 3
-  selectors:
+  selector:
     matchLabels:
       app: mysql
   template:
