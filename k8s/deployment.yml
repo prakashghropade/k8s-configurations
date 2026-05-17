@@ -27,9 +27,9 @@ spec:
           requests:
             memory: "64Mi"
             cpu: "250m"
-      volumeMounts:
-        - mountPath:  /usr/share/nginx/html
-          name: my-volume
+        volumeMounts:
+          - mountPath:  /usr/share/nginx/html
+            name: my-volume
       volumes:
         - name: my-volume
           persistentVolumeClaim:
