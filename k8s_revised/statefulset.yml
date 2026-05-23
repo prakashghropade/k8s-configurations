@@ -32,7 +32,7 @@ spec:
 
         - name: MYSQL_DATABASE
           valueFrom: 
-            configMpaKeyRef:
+            configMapKeyRef:
               name: mysql-config-map
               kye: MYSQL_DATABASE
 
