@@ -31,7 +31,10 @@ spec:
           value: password
 
         - name: MYSQL_DATABASE
-          value: devops
+          valueFrom: 
+            configMpaKeyRef:
+              name: mysql-config-map
+              kye: MYSQL_DATABASE
 
         volumeMounts:
         - name: mysql-data
