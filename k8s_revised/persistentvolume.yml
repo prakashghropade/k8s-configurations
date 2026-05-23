@@ -4,6 +4,7 @@ metadata:
   name: local-pvc
   labels:
     app: local
+  namespace: nginx
 spec:
   capacity:
     storage: 1Gi
