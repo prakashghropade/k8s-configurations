@@ -4,11 +4,10 @@ metadata:
   name: my-service
   namespace: nginx
 spec:
-  selector:
-    name: nginx-deployment
-    labels:
+  selectors:
       app: nginx
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
+  type: ClusterIP
