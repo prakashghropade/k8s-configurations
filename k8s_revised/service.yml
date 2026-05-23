@@ -5,8 +5,9 @@ metadata:
   namespace: my-namespace
 spec:
   selector:
+    name: nginx-deployment
     labels:
-      app: my-app
+      app: nginx
   ports:
     - protocol: TCP
       port: 80
