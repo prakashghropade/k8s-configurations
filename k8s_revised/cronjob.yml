@@ -4,7 +4,7 @@ metadata:
   name: demo-cronjob
   namespace: nginx
 spec:
-  shedule: "*/1 * * * *"
+  schedule: "*/1 * * * *"
   jobTemplate:
     spec:
       completions: 1
