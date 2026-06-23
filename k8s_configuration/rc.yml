@@ -11,7 +11,7 @@ spec:
         env: demo
       name: nginx
     spec:
-      containres:
+      containers:
       - image: nginx
         ports:
           containerPort: 80
