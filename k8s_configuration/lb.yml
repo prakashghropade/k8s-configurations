@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: loadbalancer-svc
+  labels:
+    env: demo
+spec:
+  type: LoadBalancer
+  ports:
+  - ports: 80
+    targetPort: 80
+  selector:
+    app: nginx
