@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: nginx-container
-    image: nginx123
+    image: nginx
     ports:
     - containerPort: 80
   nodeName: mycluster-worker2
