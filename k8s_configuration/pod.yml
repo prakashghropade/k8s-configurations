@@ -11,3 +11,4 @@ spec:
     image: nginx123
     ports:
     - containerPort: 80
+  nodeName: mycluster-worker2
