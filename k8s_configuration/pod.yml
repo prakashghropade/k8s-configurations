@@ -14,7 +14,7 @@ spec:
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelector:
+        nodeSelectorTerms:
         - matchExpressions:
           - key: disktype
             operator: In
