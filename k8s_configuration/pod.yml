@@ -11,8 +11,11 @@ spec:
     image: nginx
     ports:
     - containerPort: 80
-  tolerations:
-  - key: gpu
-    operator: Equal
-    value: "true"
-    effect: NoSchedule
+  affinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelector:
+      - matchExpressions:
+        - key: disktype
+          operator: In
+          values:
+          - ssd
