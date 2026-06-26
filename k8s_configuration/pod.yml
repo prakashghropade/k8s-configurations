@@ -12,10 +12,11 @@ spec:
     ports:
     - containerPort: 80
   affinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
-      nodeSelector:
-      - matchExpressions:
-        - key: disktype
-          operator: In
-          values:
-          - ssd
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelector:
+        - matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd
