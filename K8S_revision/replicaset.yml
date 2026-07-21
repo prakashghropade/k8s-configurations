@@ -10,7 +10,7 @@ spec:
     matchLabels:
       app: nginxx-rs-pod
       evn: dev
-  templates:
+  template:
     metadata:
       labels:
         app: nginx-rs-pod
