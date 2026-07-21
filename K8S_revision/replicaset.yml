@@ -7,9 +7,9 @@ metadata:
     env: dev
 spec:
   selector:
-    matchLabels:
-      app: nginx-rs-pod
-      env: dev
+    # matchLabels:
+    #   app: nginx-rs-pod
+    #   env: dev
     matchExpressions:
     - key: env
       operator: In
