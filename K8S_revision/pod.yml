@@ -4,3 +4,10 @@ metadata:
   name: nginx-pod
   labels:
     app: nginx
+    type: frontend
+spec:
+  containers:
+  - name: nginx-ccontainer
+    image: nginx:latest
+    ports:
+    - containerPort: 80
