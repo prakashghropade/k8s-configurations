@@ -6,7 +6,7 @@ metadata:
     app: nginx-rs
     env: dev
 spec:
-  selectors:
+  selector:
     matchLabels:
       app: nginxx-rs-pod
       evn: dev
