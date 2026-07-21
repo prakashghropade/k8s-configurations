@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: nginx-rs-pod
-      evn: dev
+      env: dev
   template:
     metadata:
       labels:
