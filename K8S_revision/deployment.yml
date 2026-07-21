@@ -14,7 +14,7 @@ spec:
     metadata:
       name: nginx-dop-app
       labels:
-        app: nginx-dop
+        app: nginx-app
         env: dev
     spec:
       containers:
