@@ -16,8 +16,8 @@ nodes:
   - containerPort: 30002
     hostPort: 30002
     protocol: TCP
-  - containerPort: 30002
-    hostPort: 30002
+  - containerPort: 30003
+    hostPort: 30003
     protocol: TCP
 - role: worker
   image: kindest/node:v1.16.4@sha256:b91a2c2317a000f3a783489dfb755064177dbc3a0b2f4147d50f04825d016f55
