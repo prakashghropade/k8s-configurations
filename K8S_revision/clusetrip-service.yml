@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: clusterip-service
+  labels:
+    app: nginx-app
+    env: demo
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-app-pod
+    env: dev
+  ports:
+      port: 80
+      targetPort: 80
+  
