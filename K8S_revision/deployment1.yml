@@ -14,6 +14,7 @@ spec:
     labels:
       app: nginx-app-pod
       env: dev
+  spec:
     containers:
       - name: nginx-container
         image: nginx:latest
