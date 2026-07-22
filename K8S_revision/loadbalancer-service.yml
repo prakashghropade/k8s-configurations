@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: loadbalancer-service
+  labels:
+    app: nginx-loadbalancer
+    env: dev
+spec:
+  type: LoadBalanser
+  selector:
+    app: nginx-app-pod
+    env: dev
+  ports:
+  - port: 80
+  
