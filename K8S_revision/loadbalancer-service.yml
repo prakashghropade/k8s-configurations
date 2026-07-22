@@ -6,7 +6,7 @@ metadata:
     app: nginx-loadbalancer
     env: dev
 spec:
-  type: LoadBalanser
+  type: LoadBalancer
   selector:
     app: nginx-app-pod
     env: dev
