@@ -14,10 +14,10 @@ spec:
     labels:
       app: nginx-app-pod
       env: dev
-  spec:
-    containers:
-      - name: nginx-container
-        image: nginx:latest
-        ports:
-          - targetPorts: 80
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:latest
+          ports:
+            - targetPorts: 80
   replicas: 3
