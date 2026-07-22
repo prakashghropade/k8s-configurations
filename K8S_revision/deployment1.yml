@@ -11,9 +11,10 @@ spec:
       app: nginx-app-pod
       env: dev
   template:
-    labels:
-      app: nginx-app-pod
-      env: dev
+    metadata:
+      labels:
+        app: nginx-app-pod
+        env: dev
     spec:
       containers:
         - name: nginx-container
