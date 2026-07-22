@@ -1,20 +1,22 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: myapp
   labels:
     app: multicontainer
+
 spec:
-  containers:
-  - name: myapp-containers
-    image: busybox:1.28
-    command: ['sh', '-c', 'ehoc the app is runngi && sleep 3600']
-    env:
-    - name: FIRSTNAME
-      value: prakash
-    
   initContainers:
   - name: init-myservice
     image: busybox:1.28
-    command: ['sh' , '-c']
-    args:  ['until nslookup myservice.default.svc.cluster.local; do echo "waiting for service to be up" sleep 2 done']
+    command: ['sh', '-c']
+    args:
+      - 'until nslookup myservice.default.svc.cluster.local; do echo "waiting for service to be up"; sleep 2; done'
+
+  containers:
+  - name: myapp-container
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo "The app is running"; sleep 3600']
+    env:
+    - name: FIRSTNAME
+      value: prakash
