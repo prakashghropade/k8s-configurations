@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp
+  labels: myapp-pod
+spec:
+  containers:
+  - name: myapp-containers
+    image: busybox:1.28
+    env:
+    - name: FIRSTNAME
+      value: prakash
