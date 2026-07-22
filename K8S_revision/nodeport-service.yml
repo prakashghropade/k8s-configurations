@@ -8,7 +8,6 @@ metadata:
 spec:
   type: NodePort
   selector:
-    matchLabels:
       app: nginx-app
       env: dev
   ports:
