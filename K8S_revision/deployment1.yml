@@ -12,6 +12,7 @@ spec:
       env: dev
   template:
     metadata:
+      name: nginx-pod
       labels:
         app: nginx-app-pod
         env: dev
@@ -20,5 +21,5 @@ spec:
         - name: nginx-container
           image: nginx:latest
           ports:
-            - targetPorts: 80
+            - containerPort: 80
   replicas: 3
