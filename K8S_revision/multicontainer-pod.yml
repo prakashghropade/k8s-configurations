@@ -7,6 +7,13 @@ spec:
   containers:
   - name: myapp-containers
     image: busybox:1.28
+    command: ['sh', '-c', 'ehoc the app is runngi && sleep 3600']
     env:
     - name: FIRSTNAME
       value: prakash
+    
+  initContainers:
+  - name: init-myservice
+    image: busybox:1.28
+    command: ['sh' , '-c']
+    args:  ['until nslookup myservice.default.svc.cluster.local': do echo "waiting for service to be up; sleep 2; done"]
