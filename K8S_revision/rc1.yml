@@ -1,4 +1,4 @@
-kind: ReplicationController
+kind: replicationController
 apiVersion: v1
 metadata:
   name: nginx-rc
@@ -6,20 +6,17 @@ metadata:
     app: nginx-app
     env: dev
 spec:
-  selector:
-    matchLabels:
-      app: nginx-app-pod
-      env: dev
   template:
     metadata:
       labels:
-        app: nginx-app-pod
+        app: nginx-app
         env: dev
-      name: nginx-rc-pod
     spec:
       containers:
-        - name: nginx-container
+        - name: nginx-pod
           image: nginx:latest
-          ports:
-            - containerPort: 80
   replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-app
+      env: dev
