@@ -1,0 +1,21 @@
+kind: DeamonSet
+apiVersion: apps/v1
+metadata:
+  name: nginx-deamonset
+  labels:
+    env: demo
+sepc:
+  template:
+    metadata:
+      labels:
+        env: demo
+      name:  nginx-deamonset
+    containers:
+    - name: nginx-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+    selector:
+      matchLabels:
+        env: demo
+        
