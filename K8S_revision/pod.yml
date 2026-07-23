@@ -11,9 +11,9 @@ spec:
     image: nginx:latest
     ports:
     - containerPort: 80
-    tolerations:
-    - key: gpu
-      operator: Equal
-      value: true
-      effect: NoSchedule
+  tolerations:
+  - key: gpu
+    operator: Equal
+    value: true
+    effect: NoSchedule
   
