@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nodeaffifnity-prefereed
+  labels:
+    app: node-app
+    env: dev
+spec:
+  containers:
+  - name: nginx-affinity-prefereed
+    image: nginx:latest
+    ports:
+      - containerPort: 80
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd
