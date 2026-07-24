@@ -4,7 +4,7 @@ metadata:
   name: memory-demo
   namespace: mem-example
 spec:
-  container:
+  containers:
   - name: mem-demo-ctr
     image: polinux/stress
     resources:
