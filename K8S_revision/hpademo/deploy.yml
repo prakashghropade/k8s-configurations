@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: php-apache
 spec:
-  selctor:
+  selector:
     matchLabels:
       run: php-apache
   template:
