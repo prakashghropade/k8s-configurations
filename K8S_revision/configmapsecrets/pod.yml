@@ -10,5 +10,5 @@ spec:
     image: busybox:1.28
     env:
     - name: "Prkash"
-    commad: ['sh', '-c', 'echo This app is running && sleep 3600']
+    command: ['sh', '-c', 'echo This app is running && sleep 3600']
 
