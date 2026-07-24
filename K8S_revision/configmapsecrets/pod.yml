@@ -10,6 +10,9 @@ spec:
     image: busybox:1.28
     env:
     - name: FIRSTNAME
-      value: "Prakash"
+      valueFrom:
+        configMapKeyRef:
+          name: demo-configmap
+          key: first_name
     command: ['sh', '-c', 'echo This app is running && sleep 3600']
 
