@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: configmapandsecretes
+  labels:
+    app: nginx-app
+spec:
+  containers:
+  - name: myapp-container
+    image: busybox:1.28
+    env:
+    - name: "Prkash"
+    commad: ['sh', '-c', 'echo This app is running && sleep 3600']
+
