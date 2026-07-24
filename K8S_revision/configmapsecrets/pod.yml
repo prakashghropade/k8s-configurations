@@ -9,6 +9,7 @@ spec:
   - name: myapp-container
     image: busybox:1.28
     env:
-    - name: "Prkash"
+    - name: FIRSTNAME
+      value: "Prakash"
     command: ['sh', '-c', 'echo This app is running && sleep 3600']
 
