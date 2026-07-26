@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: redis-pod
+spec:
+  containers:
+  - name: redis-container
+    image: redis
+    ports:
+    - containerPort:
+  
