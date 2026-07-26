@@ -8,6 +8,6 @@ spec:
   capacity:
     storage: 1Gi
   accessModes:
-    - ReadWriteOnce:
+    - ReadWriteOnce
   hostPath:
     path: "/home/ubuntu/day29"
