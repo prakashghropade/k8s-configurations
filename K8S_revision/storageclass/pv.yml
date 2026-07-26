@@ -5,9 +5,10 @@ metadata:
   labels:
     type: local
 spec:
+  storageClassName: standard
   capacity:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/ubuntu/day29"
+    path: "/home/ubuntu/day28-storage-k8s"
