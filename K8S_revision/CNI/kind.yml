@@ -25,3 +25,4 @@ nodes:
   image: kindest/node:v1.31.2
 networking:
   disableDefaultCNI: true
+  podSubnet: 172.31.16.0/20
