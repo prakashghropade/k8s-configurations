@@ -1,11 +1,16 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
-  name: redis-pod
+  name: nginx
 spec:
   containers:
-  - name: redis-container
-    image: redis
-    ports:
-    - containerPort:
-  
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: storage
+      mountPath: /usr/share/nginx/html
+
+  volumes:
+  - name: storage
+    persistentVolumeClaim:
+      claimName: demo-pvc
