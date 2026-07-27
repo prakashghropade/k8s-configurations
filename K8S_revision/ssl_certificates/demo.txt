@@ -1,0 +1,15 @@
+# To generate a key file
+
+openssl genrsa -out adam.key 2048
+
+
+# To generate csr file
+openssl req -new -key adam.key -out adam.csr -subj "/CN=adam"
+
+# approve csr request
+kubectl certificate approve <certificate-signing-request-name>
+
+
+# denied csr request
+kubectl certificate deny <certificate-signing-request-name>
+
