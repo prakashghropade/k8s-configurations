@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: build-robot-secret
+  namespace: default
+  labels:
+    kubernetes.io/legacy-token-last-used: 2022-10-24
+    kubernetes.io/legacy-token-invalid-since: 2023-10-25
+  annotations:
+    kubernetes.io/service-account.name: build-sa
+type: kubernetes.io/service-account-token
