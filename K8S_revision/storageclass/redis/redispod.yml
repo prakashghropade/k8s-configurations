@@ -7,10 +7,10 @@ spec:
   - name: nginx
     image: nginx
     volumeMounts:
-    - name: storage
+    - name: task-pv-volume
       mountPath: /usr/share/nginx/html
 
   volumes:
-  - name: storage
+  - name: task-pv-volume
     persistentVolumeClaim:
       claimName: task-pv-claim
