@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: task-pv-claim
 spec:
-  accessModes:
+  accessMode:
     - ReadWiteOnce
   resources:
     requests:
