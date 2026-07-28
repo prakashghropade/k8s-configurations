@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: task-pv-volume
+  lebels:
+    type: local
+spec:
+  capacity:
+    storage: 1Gi
+  accessmodes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/ubuntu/Prakash"
